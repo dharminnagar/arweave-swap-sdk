@@ -1,15 +1,37 @@
 {
   "name": "arweave-swap-sdk",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "TypeScript SDK for token swaps on the Arweave blockchain",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "jest",
+    "prepare": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "arweave",
+    "blockchain",
+    "swap",
+    "tokens",
+    "sdk"
+  ],
   "author": "",
-  "license": "ISC",
-  "description": "A Swap SDK for Arweave Ecosystem",
+  "license": "MIT",
   "dependencies": {
-    "typescript": "^5.8.3"
-  }
+    "@permaweb/aoconnect": "^0.0.82",
+    "arweave": "^1.15.7",
+    "jose": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
