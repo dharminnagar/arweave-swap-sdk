@@ -12,10 +12,10 @@
  * 
  * // Perform a swap
  * const [messageId, result] = await swap.swap(
- *   'baseTokenProcessId',
- *   'quoteTokenProcessId',
- *   '1000000000000', // amount
- *   '500000000000'  // minimum amount out
+ *   'processPID',        // The process ID of the token you're swapping from
+ *   'poolPID',           // The process ID of the pool you're swapping through
+ *   '1000000000000',     // Amount of token to swap
+ *   '500000000000'       // Minimum amount of token to receive
  * );
  * ```
  */
