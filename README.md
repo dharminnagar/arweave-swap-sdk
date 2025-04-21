@@ -14,7 +14,6 @@ npm install arweave-swap-sdk
 
 ```typescript
 import { ArweaveSigner, Swap } from 'arweave-swap-sdk';
-import { createDataItemSigner } from "@permaweb/aoconnect";
 
 // Initialize the signer with your Arweave wallet
 const signer = new ArweaveSigner(wallet);
