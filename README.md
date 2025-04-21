@@ -19,14 +19,14 @@ import { ArweaveSigner, Swap } from 'arweave-swap-sdk';
 const signer = new ArweaveSigner(wallet);
 
 // Create a new Swap instance
-const swap = new Swap(signer);
+const swapper = new Swap(signer);
 ```
 
 ### Performing a Swap
 
 ```typescript
 // Perform a swap
-const [messageId, result] = await swap.swap(
+const [messageId, result] = await swapper.swap(
   'processPID',        // The process ID of the token you're swapping from
   'poolPID',           // The process ID of the pool you're swapping through
   '1000000000000',     // Amount of token to swap
@@ -41,7 +41,7 @@ console.log('Swap result:', result);
 
 ```typescript
 // Send a message to a process
-const [messageId, result] = await swap.sendMessage(
+const [messageId, result] = await swapper.sendMessage(
   'processPID',        // The process ID to send the message to
   [                    // Tags for the message
     { name: 'Action', value: 'Transfer' },
